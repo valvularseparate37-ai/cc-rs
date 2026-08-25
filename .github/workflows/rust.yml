@@ -1,0 +1,31 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build
+      run: cargo build --verbose
+    - name: Run tests
+      run: cargo test --verbose
+      // Example custom build script.
+fn main() {
+    // Tell Cargo that if the given file changes, to rerun this build script.
+    println!("cargo::rerun-if-changed=src/hello.c");
+    // Use the `cc` crate to build a C file and statically link it.
+    cc::Build::new()
+        .file("src/hello.c")
+        .compile("hello");
+}
