@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.5](https://github.com/valvularseparate37-ai/cc-rs/compare/cc-v1.4.4...cc-v1.4.5) - 2026-08-28
+
+### Other
+
+- Add custom build script for C file compilation
+- simplify conditional logic using `then` method ([#1860](https://github.com/valvularseparate37-ai/cc-rs/pull/1860))
+
 ## [1.4.4](https://github.com/rust-lang/cc-rs/compare/cc-v1.4.3...cc-v1.4.4) - 2026-08-21
 
 ### Fixed
